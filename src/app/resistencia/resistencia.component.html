@@ -1,0 +1,54 @@
+<div class="container d-grid gap-2 col-6 mx-auto">
+    <label>Banda 1</label>
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="banda1">
+      <option [value]="color" *ngFor="let color of colors">{{color}}</option>
+    </select>
+  
+    <label>Banda 2</label>
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="banda2">
+      <option [value]="color" *ngFor="let color of colors">{{color}}</option>
+    </select>
+  
+    <label>Banda 3</label>
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="banda3">
+      <option [value]="color" *ngFor="let color of colors">{{color}}</option>
+    </select>
+  
+    <label>Tolerancia</label>
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="tolerancia">
+      <option [value]="tolerancia" *ngFor="let tolerancia of tolerances">{{tolerancia}}</option>
+    </select>
+  
+    <br>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button type="submit" class="btn btn-primary" (click)="calcularResistencia()">CALCULAR</button>
+    </div>
+    <br>
+  
+    <div>
+      <table class="mt-5 table caption-top border border-2 rounded-4 overflow-hidden">
+        <thead>
+          <tr>
+            <th>Banda 1</th>
+            <th>Banda 2</th>
+            <th>Banda 3</th>
+            <th>Tolerancia</th>
+            <th>Resistencia</th>
+            <th>Min</th>
+            <th>Max</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="{{ banda1 }} text-center text-white">{{ banda1 }}</td>
+            <td class="{{ banda2 }} text-center text-white">{{ banda2 }}</td>
+            <td class="{{ banda3 }} text-center text-white">{{ banda3 }}</td>
+            <td class="{{ tolerancia }} text-center text-white">{{ tolerancia }}</td>
+            <td>{{ valor }}</td>
+            <td>{{ min }}</td>
+            <td>{{ max }}</td>
+          </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
