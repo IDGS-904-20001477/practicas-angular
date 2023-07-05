@@ -8,12 +8,14 @@ import { DistanciaModule } from './distancia/distancia.module';
 import { ResistenciaModule } from './resistencia/resistencia.module';
 import { CineModule } from './cine/cine.module';
 import { MenuComponent } from './menu/menu.component';
+import { PizzaComponent } from './pizza/pizza.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent  
+    MenuComponent,
+    PizzaComponent  
   ],
   imports: [
     BrowserModule,
